@@ -7,13 +7,6 @@ pipeline {
         DOCKER_TAG = "latest"
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/Dhanvikah/node-bulletin-board-ci.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 script {
