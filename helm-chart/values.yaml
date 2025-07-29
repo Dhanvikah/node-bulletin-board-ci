@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: komall6/node-bulletin-board
+  repository: dhanvikah/node-bulletin-board
   tag: latest
   pullPolicy: Always
 
