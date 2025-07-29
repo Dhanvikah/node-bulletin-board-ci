@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS = 'dockerhub-creds'
-        DOCKER_IMAGE = "yourdockerhubusername/node-bulletin-board"
+        DOCKERHUB_CREDENTIALS = 'Docker-Creds'
+        DOCKER_IMAGE = "komall6/node-bulletin-board"
         DOCKER_TAG = "latest"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/dockersamples/node-bulletin-board.git'
+                git 'https://github.com/Dhanvikah/node-bulletin-board-ci.git'
             }
         }
 
