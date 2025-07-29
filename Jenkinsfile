@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS = 'Docker-Creds'
+        DOCKERHUB_CREDENTIALS = 'Docker-creds'
         DOCKER_IMAGE = "komall6/node-bulletin-board"
         DOCKER_TAG = "latest"
     }
