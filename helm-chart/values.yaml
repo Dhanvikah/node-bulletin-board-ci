@@ -1,0 +1,10 @@
+replicaCount: 1
+
+image:
+  repository: yourdockerhubusername/node-bulletin-board
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  port: 3000
