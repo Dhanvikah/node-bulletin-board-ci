@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Chart.Name }}
+  name: node-bulletin-board
+  labels:
+    app: node-bulletin-board
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 1
   selector:
     matchLabels:
-      app: {{ .Chart.Name }}
+      app: node-bulletin-board
   template:
     metadata:
       labels:
-        app: {{ .Chart.Name }}
+        app: node-bulletin-board
     spec:
       containers:
-        - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          ports:
-            - containerPort: 3000
+      - name: node-bulletin-board
+        image: dhanvikah/node-bulletin-board:latest
+        ports:
+        - containerPort: 3000
